@@ -1,1 +1,1 @@
-Angular Hapi Seed with Ui-Router
+Comment Generator built with Angular

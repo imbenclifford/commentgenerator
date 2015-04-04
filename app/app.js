@@ -1,22 +1,36 @@
-'use strict';
-
 // Declare app level module which depends on views, and components
 angular.module('myApp', [
   'ngRoute',
   'ui.router',
-]).
-config(['$stateProvider', '$urlRouterProvider', function($stateProvider, $urlRouterProvider) {
+  'StartupCtrl',
+  'ScienceCtrl',
+  'PoliticsCtrl',
+  'BusinessCtrl',
+])
+.config(['$stateProvider', '$urlRouterProvider', function($stateProvider, $urlRouterProvider) {
 
   $urlRouterProvider.otherwise("/state1");
   //
   // Now set up the states
   $stateProvider
-    .state('state1', {
-      url: "/state1",
-      templateUrl: "partials/state1.html"
+    .state('startup', {
+      url: "/startup",
+      templateUrl: "partials/StartupCommentGenerator.html",
+      controller: "StartupController"
     })
-    .state('state2', {
-      url: "/state2",
-      templateUrl: "partials/state2.html"
+    .state('science', {
+      url: "/science",
+      templateUrl: "partials/ScienceCommentGenerator.html",
+      controller: 'ScienceController'
     })
+    .state('politics', {
+      url: "/politics",
+      templateUrl: "partials/PoliticsCommentGenerator.html",
+      controller: 'PoliticsController'
+    })
+    .state('business', {
+      url: "/business",
+      templateUrl: "partials/BusinessBookCommentGenerator.html",
+      controller: 'BusinessController'
+    });
 }]);

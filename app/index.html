@@ -1,18 +1,26 @@
-<!DOCTYPE html>
 <html lang="en" ng-app="myApp">
 <head>
   <meta charset="utf-8">
   <title>Angular Hapi Seed</title>
-</head>
-<body>
-  <a ui-sref="state1">State 1</a>
-  <a ui-sref="state2">State 2</a>
-  <div ui-view></div>
-
   <script src="bower_components/angular/angular.js"></script>
   <script src="bower_components/angular-route/angular-route.js"></script>
-  <script src="app.js"></script>
   <script src="bower_components/angular-ui-router/release/angular-ui-router.min.js"></script>
+  <script src="app.js"></script>
+  <script src="partials/StartupCtrl.js"></script>
+  <script src="partials/ScienceCtrl.js"></script>
+  <script src="partials/PoliticsCtrl.js"></script>
+  <script src="partials/BusinessCtrl.js"></script>
+  <link rel="stylesheet" href="main.css"></link>  
+
+
+</head>
+<body>
+  <a ui-sref="startup">Startup</a>
+  <a ui-sref="science">Science</a>
+  <a ui-sref="politics">Politics</a>
+  <a ui-sref="business">Business</a>
+
+  <div ui-view></div>
 
 </body>
 </html>
